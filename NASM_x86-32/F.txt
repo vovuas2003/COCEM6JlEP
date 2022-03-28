@@ -1,0 +1,31 @@
+Напишите программу, вычисляющую минимум из двух чисел.
+
+extern printf
+extern scanf
+global main
+section .text
+main:
+push y
+push x
+push vvod
+call scanf
+add esp, 12
+mov eax, [x]
+mov ebx, [y]
+cmp eax, ebx
+jle yslovie
+mov eax, ebx
+yslovie:
+mov [x], eax
+push dword [x]
+push vivod
+call printf
+add esp, 8
+xor eax, eax
+ret
+section .data
+vvod db "%d %d", 0
+vivod db "%d", 10, 0
+section .bss
+x resd 1
+y resd 1
