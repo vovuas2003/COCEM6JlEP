@@ -1,0 +1,26 @@
+Дано целое число A (0 <= A < 2^32).
+Вывести остаток от деления A на 2^16.
+
+extern printf
+extern scanf
+global main
+section .text
+main:
+push x
+push vvod
+call scanf
+add esp, 8
+mov eax, [x]
+and eax, 65535
+mov [x], eax
+push dword [x]
+push vivod
+call printf
+add esp, 8
+xor eax, eax
+ret
+section .data
+vvod db "%u", 0
+vivod db "%u", 10, 0
+section .bss
+x resd 1
