@@ -1,0 +1,21 @@
+Напишите программу, выводяющую текст "Liberté, égalité, fraternité!" без кавычек.
+Кодировка UTF-8
+Исполнение начинается с метки main
+
+extern printf
+global main
+
+section .text
+main:
+	push hello
+	call printf
+	add esp, 4
+	xor eax, eax
+	ret
+
+section .data
+hello db "Liberté, égalité, fraternité!", 10, 0
+
+
+10 - символ \n для Linux
+0 - нулевой бит, символ конца строки
