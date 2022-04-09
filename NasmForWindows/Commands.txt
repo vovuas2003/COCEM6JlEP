@@ -1,0 +1,17 @@
+========================================
+asm -> exe
+
+nasm -f win32 filename.asm -o filename.o
+gcc filename.o -o filename.exe
+
+========================================
+
+c -> exe
+
+gcc -c filename.c -o filename.o
+gcc filename.o -o filename.exe
+
+========================================
+!!! gcc from CodeBlocks\MinGW\bin
+must be added to PATH (Win+R -> systempropertiesadvanced -> environment variables)
+NASM directory must be added here too
