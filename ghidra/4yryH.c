@@ -31,3 +31,5 @@ int main() {
     free(buf);
     return 0;
 }
+//RUN IT WITH CMD
+//4yryH.exe < uran.o > patch.o 2> errorlog.txt
